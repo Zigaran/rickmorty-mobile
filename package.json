@@ -9,6 +9,23 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit --skipLibCheck && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn run prettier-format",
+      "yarn run lint",
+      "prettier src --write",
+      "git add"
+    ],
+    "*.{json}": [
+      "prettier src --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.63.2"
@@ -47,10 +64,5 @@
       "json",
       "node"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn run lint"
-    }
   }
 }
