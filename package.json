@@ -11,19 +11,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit --skipLibCheck && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "yarn run prettier-format",
-      "yarn run lint",
-      "prettier src --write",
-      "git add"
-    ],
-    "*.{json}": [
-      "prettier src --write",
-      "git add"
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
     ]
   },
   "dependencies": {
