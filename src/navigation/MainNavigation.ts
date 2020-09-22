@@ -11,6 +11,7 @@ const stack = {
   },
 };
 
+// @ts-ignore
 export const MainStack = createStackNavigator(stack);
 
 export type MainRoutes = keyof typeof stack;
