@@ -1,12 +1,17 @@
 import { createStackNavigator } from 'react-navigation-stack';
+import { DrawerNavigator } from './DrawerNavigator';
+import { Results } from '../screens';
 
-import Home from '../screens';
-
-const noHeader = { header: null };
+const noHeader = { headerShown: false };
 
 const stack = {
   Home: {
-    screen: Home,
+    screen: DrawerNavigator,
+    navigationOptions: noHeader,
+  },
+
+  Results: {
+    screen: Results,
     navigationOptions: noHeader,
   },
 };

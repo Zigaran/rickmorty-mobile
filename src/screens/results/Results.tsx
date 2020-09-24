@@ -1,14 +1,12 @@
 import React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 
-const Home = () => {
+const Results = () => {
   return (
     <SafeAreaView>
-      <View>
-        <Text>HOME</Text>
-      </View>
+      <Text>RESULTS SCREEN</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Results;
