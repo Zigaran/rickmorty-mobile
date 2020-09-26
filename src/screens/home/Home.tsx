@@ -16,16 +16,8 @@ const Home = ({ navigation }: Props) => {
   return (
     <Container>
       <TouchableOpacity onPress={openMenu} style={styles.menuButton}>
-        <Icon name="menu" size={33} color={theme.color.creamWhite} />
+        <Icon name="menu" size={28} color={theme.color.creamWhite} />
       </TouchableOpacity>
-      {/* <View>
-        <Text>HOME SCREEN</Text>
-        <Button
-          onPress={() => navigation.navigate('Results')}
-          color="black"
-          title="GO TO RESULTS"
-        />
-      </View> */}
     </Container>
   );
 };

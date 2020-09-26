@@ -1,10 +1,8 @@
-const tintColor = '#62d0cf';
-
 const color = {
   white: 'white',
   black: 'black',
   purple: '#625261',
-  gray: '#525252',
+  gray: 'rgba(0, 0, 0, 0.3)',
   lightGray: '#a6a6a4',
   creamWhite: '#e8e8e8',
   skyBlue: '#89beb3',

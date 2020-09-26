@@ -1,6 +1,5 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { theme } from '../../styled';
-import styled from 'styled-components/native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,51 +9,77 @@ export const styles = StyleSheet.create({
   content: {
     flex: 1,
     position: 'absolute',
+    zIndex: 999,
     width: '100%',
   },
 
-  drawerItem: {
-    backgroundColor: theme.color.purple,
-    borderBottomColor: theme.color.lightGray,
-    borderBottomWidth: 1,
-    justifyContent: 'center',
-    height: 45,
+  header: {
     width: '100%',
-  },
-
-  itemRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
-  iconBackground: {
-    width: 30,
-    height: 30,
-    borderRadius: 30,
-    backgroundColor: theme.color.gray,
+    height: 200,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 10,
   },
 
-  drawerText: {
+  headerText: {
     color: theme.color.creamWhite,
+    opacity: 0.75,
+    alignSelf: 'center',
     fontSize: 15,
-    width: '75%',
-    paddingLeft: 10,
+    fontWeight: 'bold',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
 
-  dotActive: {
-    width: 10,
-    height: 10,
-    borderRadius: 10,
-    backgroundColor: theme.color.green,
+  headerUnderline: {
+    alignSelf: 'center',
+    width: '70%',
+    height: 5,
+    borderTopColor: theme.color.creamWhite,
+    borderTopWidth: 1,
+  },
+
+  logo: {
+    width: 104,
+    height: 100,
+    resizeMode: 'cover',
   },
 
   backgroundDrawer: {
     flex: 1,
     position: 'relative',
+    zIndex: -1,
     resizeMode: 'cover',
-    opacity: 0.2,
+    opacity: 0.4,
+  },
+
+  switcher: {
+    marginTop: 30,
+  },
+
+  text: {
+    color: theme.color.creamWhite,
+    opacity: 0.75,
+    alignSelf: 'center',
+    fontSize: 15,
+  },
+
+  underline: {
+    alignSelf: 'center',
+    width: '40%',
+    height: 5,
+    borderTopColor: theme.color.creamWhite,
+    borderTopWidth: 1,
+  },
+
+  space: {
+    height: '32%',
+    width: '100%',
+  },
+
+  footer: {
+    alignSelf: 'center',
+    height: 50,
+    width: 200,
+    backgroundColor: theme.color.green,
   },
 });

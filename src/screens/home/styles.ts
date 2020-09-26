@@ -11,7 +11,7 @@ export const Container = styled(_Container)(() => ({
 export const styles = StyleSheet.create({
   menuButton: {
     alignItems: 'center',
-    backgroundColor: theme.color.lightGrey,
+    backgroundColor: theme.color.gray,
     borderRadius: 20,
     height: 40,
     justifyContent: 'center',

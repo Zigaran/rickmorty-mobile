@@ -1,39 +1,36 @@
 import React from 'react';
-import { SafeAreaView, Text, TouchableHighlight, ImageBackground, View } from 'react-native';
+import { SafeAreaView, ImageBackground, View, Text, Image } from 'react-native';
 import { styles } from './styles';
-import CharIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { theme } from '../../styled';
+import DrawerItem from '../drawerItem';
+import Switcher from '../switcher';
+import icons from '../../icons';
 
 const backgroundDrawer = require('../../images/background.jpg');
+const logo = require('../../images/rick_morty_01.png');
 
 const CustomDrawerScreen = () => {
+  const isEnabled = true;
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <TouchableHighlight
-          onPress={() => console.log('Characters pressed')}
-          style={styles.drawerItem}
-        >
-          <View style={styles.itemRow}>
-            <View style={styles.iconBackground}>
-              <CharIcon name="menu" size={25} color={theme.color.creamWhite} />
-            </View>
-            <Text style={styles.drawerText}>CHARACTERS</Text>
-            <View style={styles.dotActive} />
-          </View>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.drawerItem}>
-          <View style={styles.itemRow}>
-            <Text style={styles.drawerText}>LOCATIONS</Text>
-            <View style={styles.dotActive} />
-          </View>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.drawerItem}>
-          <View style={styles.itemRow}>
-            <Text style={styles.drawerText}>EPISODES</Text>
-            <View style={styles.dotActive} />
-          </View>
-        </TouchableHighlight>
+        <View style={styles.header}>
+          <Image source={logo} style={styles.logo} />
+          <Text style={styles.headerText}>{`Rick & Morty Filter`}</Text>
+          <View style={styles.headerUnderline} />
+        </View>
+        <DrawerItem title="Characters" icon={icons.character} />
+        <DrawerItem title="Locations" icon={icons.location} />
+        <DrawerItem title="Episodes" icon={icons.episode} />
+
+        <View style={styles.switcher}>
+          <Text style={styles.text}>Search By</Text>
+          <View style={styles.underline} />
+          <Switcher />
+        </View>
+        <View style={styles.space} />
+        <View style={styles.footer}>
+          <Text>Puzzle Challenge</Text>
+        </View>
       </View>
       <ImageBackground source={backgroundDrawer} style={styles.backgroundDrawer} />
     </SafeAreaView>
