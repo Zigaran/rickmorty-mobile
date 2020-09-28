@@ -4,9 +4,11 @@ import { styles } from './styles';
 import DrawerItem from '../drawerItem';
 import Switcher from '../switcher';
 import icons from '../../icons';
+import FooterButton from '../footerButton';
 
 const backgroundDrawer = require('../../images/background.jpg');
 const logo = require('../../images/rick_morty_01.png');
+const puzzleUrl = 'https://thepuzzle.digital/';
 
 const CustomDrawerScreen = () => {
   const isEnabled = true;
@@ -28,9 +30,7 @@ const CustomDrawerScreen = () => {
           <Switcher />
         </View>
         <View style={styles.space} />
-        <View style={styles.footer}>
-          <Text>Puzzle Challenge</Text>
-        </View>
+        <FooterButton title="Puzzle Challenge" url={puzzleUrl} />
       </View>
       <ImageBackground source={backgroundDrawer} style={styles.backgroundDrawer} />
     </SafeAreaView>

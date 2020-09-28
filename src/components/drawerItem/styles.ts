@@ -4,7 +4,6 @@ import { theme } from '../../styled';
 export const styles = StyleSheet.create({
   drawerItem: {
     backgroundColor: theme.color.gray,
-
     justifyContent: 'center',
     height: 45,
     width: '100%',

@@ -1,11 +1,18 @@
 import styled from 'styled-components/native';
 import { Container as _Container } from '../../components';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { theme } from '../../styled';
 
 export const Container = styled(_Container)(() => ({
   backgroundColor: theme.color.purple,
   flex: 1,
+}));
+
+export const Content = styled(View)(() => ({
+  height: '80%',
+  width: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 export const styles = StyleSheet.create({
@@ -17,5 +24,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     width: 40,
     margin: 10,
+  },
+
+  logo: {
+    width: 130,
+    height: 130,
+    resizeMode: 'cover',
   },
 });

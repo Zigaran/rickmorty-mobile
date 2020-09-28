@@ -7,6 +7,7 @@ const color = {
   creamWhite: '#e8e8e8',
   skyBlue: '#89beb3',
   green: '#59ff00',
+  orange: 'rgba(255, 98, 0, 0.4)',
 };
 
 export const theme = {

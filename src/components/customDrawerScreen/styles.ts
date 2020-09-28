@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   content: {
     flex: 1,
     position: 'absolute',
-    zIndex: 999,
+    zIndex: 1,
     width: '100%',
   },
 
@@ -74,12 +74,5 @@ export const styles = StyleSheet.create({
   space: {
     height: '32%',
     width: '100%',
-  },
-
-  footer: {
-    alignSelf: 'center',
-    height: 50,
-    width: 200,
-    backgroundColor: theme.color.green,
   },
 });
