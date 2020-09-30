@@ -2,6 +2,7 @@ const color = {
   white: 'white',
   black: 'black',
   purple: '#625261',
+  darkPurple: '#3d2d3c',
   gray: 'rgba(0, 0, 0, 0.3)',
   lightGray: '#a6a6a4',
   creamWhite: '#e8e8e8',

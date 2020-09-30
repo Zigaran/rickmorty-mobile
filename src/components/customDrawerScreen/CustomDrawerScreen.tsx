@@ -6,7 +6,7 @@ import Switcher from '../switcher';
 import icons from '../../icons';
 import FooterButton from '../footerButton';
 
-const backgroundDrawer = require('../../images/background.jpg');
+const backgroundDrawer = require('../../images/background.png');
 const logo = require('../../images/rick_morty_01.png');
 const puzzleUrl = 'https://thepuzzle.digital/';
 

@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     position: 'relative',
     zIndex: -1,
     resizeMode: 'cover',
-    opacity: 0.4,
+    opacity: 0.8,
   },
 
   switcher: {

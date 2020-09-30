@@ -31,4 +31,9 @@ export const styles = StyleSheet.create({
     height: 130,
     resizeMode: 'cover',
   },
+
+  searchButton: {
+    width: 100,
+    height: 40,
+  },
 });

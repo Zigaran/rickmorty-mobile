@@ -14,6 +14,7 @@ const name = <NameIcon name="human" size={21} color={theme.color.creamWhite} />;
 const type = <TypeIcon name="electronjs" size={21} color={theme.color.creamWhite} />;
 const search = <SearchIcon name="search" size={21} color={theme.color.lightGray} />;
 const close = <CloseIcon name="close" size={25} color={theme.color.lightGray} />;
+const back = <_LocationIcon name="md-chevron-back" size={25} color={theme.color.creamWhite} />;
 
 const icons = {
   character,
@@ -23,6 +24,7 @@ const icons = {
   type,
   search,
   close,
+  back,
 };
 
 export default icons;

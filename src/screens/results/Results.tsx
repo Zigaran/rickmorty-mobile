@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
+import { Header } from '../../components';
+import { Container } from './styles';
 
 const Results = () => {
   return (
-    <SafeAreaView>
-      <Text>RESULTS SCREEN</Text>
-    </SafeAreaView>
+    <Container>
+      <Header title="RESULTS" />
+    </Container>
   );
 };
 

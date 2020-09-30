@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 45,
     width: '100%',
-    opacity: 0.75,
   },
 
   itemRow: {

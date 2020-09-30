@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, SafeAreaView, Button, Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 import { Navigation } from '../../navigation/navTypes';
 import { Container, Content, styles } from './styles';
 import { theme } from '../../styled';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { SearchInput } from '../../components';
+import { SearchButton, SearchInput } from '../../components';
 
 interface Props {
   navigation: Navigation;
@@ -25,6 +25,7 @@ const Home = ({ navigation }: Props) => {
       <Content>
         <Image source={homeLogo} style={styles.logo} />
         <SearchInput />
+        <SearchButton title="Search" onPress={() => {}} />
       </Content>
     </Container>
   );

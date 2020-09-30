@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
+    opacity: 0.6,
   },
 
   puzzleChallenge: {
@@ -21,6 +22,8 @@ export const styles = StyleSheet.create({
 
   text: {
     color: theme.color.creamWhite,
-    opacity: 0.75,
+    textShadowColor: 'rgba(0, 0, 0, 0.7)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10,
   },
 });

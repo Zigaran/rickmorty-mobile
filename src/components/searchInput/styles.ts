@@ -8,9 +8,15 @@ export const styles = StyleSheet.create({
     height: 40,
     width: 250,
     margin: 20,
+    marginBottom: 50,
     borderWidth: 1,
     borderRadius: 6,
     borderColor: theme.color.creamWhite,
+  },
+
+  fillSpace: {
+    width: 30,
+    height: '100%',
   },
 
   icon: {
