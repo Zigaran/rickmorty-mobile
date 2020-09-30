@@ -5,13 +5,13 @@ import { Results } from '../screens';
 const noHeader = { headerShown: false };
 
 const stack = {
-  Results: {
-    screen: Results,
+  Home: {
+    screen: DrawerNavigator,
     navigationOptions: noHeader,
   },
 
-  Home: {
-    screen: DrawerNavigator,
+  Results: {
+    screen: Results,
     navigationOptions: noHeader,
   },
 };

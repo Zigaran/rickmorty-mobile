@@ -14,25 +14,26 @@ const CustomDrawerScreen = () => {
   const isEnabled = true;
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.header}>
-          <Image source={logo} style={styles.logo} />
-          <Text style={styles.headerText}>{`Rick & Morty Filter`}</Text>
-          <View style={styles.headerUnderline} />
-        </View>
-        <DrawerItem title="Characters" icon={icons.character} />
-        <DrawerItem title="Locations" icon={icons.location} />
-        <DrawerItem title="Episodes" icon={icons.episode} />
+      <ImageBackground source={backgroundDrawer} style={styles.backgroundDrawer}>
+        <View style={styles.content}>
+          <View style={styles.header}>
+            <Image source={logo} style={styles.logo} />
+            <Text style={styles.headerText}>{`Rick & Morty Filter`}</Text>
+            <View style={styles.headerUnderline} />
+          </View>
+          <DrawerItem title="Characters" icon={icons.character} />
+          <DrawerItem title="Locations" icon={icons.location} />
+          <DrawerItem title="Episodes" icon={icons.episode} />
 
-        <View style={styles.switcher}>
-          <Text style={styles.text}>Search By</Text>
-          <View style={styles.underline} />
-          <Switcher />
+          <View style={styles.switcher}>
+            <Text style={styles.text}>Search By</Text>
+            <View style={styles.underline} />
+            <Switcher />
+          </View>
+          <View style={styles.space} />
+          <FooterButton title="Puzzle Challenge" url={puzzleUrl} />
         </View>
-        <View style={styles.space} />
-        <FooterButton title="Puzzle Challenge" url={puzzleUrl} />
-      </View>
-      <ImageBackground source={backgroundDrawer} style={styles.backgroundDrawer} />
+      </ImageBackground>
     </SafeAreaView>
   );
 };

@@ -25,7 +25,7 @@ const Home = ({ navigation }: Props) => {
       <Content>
         <Image source={homeLogo} style={styles.logo} />
         <SearchInput />
-        <SearchButton title="Search" onPress={() => {}} />
+        <SearchButton title="Search" onPress={() => navigation.navigate('Results')} />
       </Content>
     </Container>
   );

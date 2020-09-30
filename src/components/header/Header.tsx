@@ -4,13 +4,14 @@ import icons from '../../icons';
 import { styles } from './styles';
 
 interface Props {
-  title: string,
-};
+  title: string;
+  onPressBack: () => void;
+}
 
-const Header = ({title}: Props) => {
+const Header = ({ title, onPressBack }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity onPress={() => {}} style={styles.goBack}>
+      <TouchableOpacity onPress={onPressBack} style={styles.goBack}>
         {icons.back}
       </TouchableOpacity>
 

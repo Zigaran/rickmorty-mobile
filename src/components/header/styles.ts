@@ -33,6 +33,9 @@ export const styles = StyleSheet.create({
     color: theme.color.creamWhite,
     fontSize: 18,
     fontWeight: 'bold',
+    textShadowColor: 'rgba(0, 0, 0, 0.25)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10,
   },
 
   fillSpace: {

@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
   backgroundDrawer: {
     flex: 1,
     position: 'relative',
-    zIndex: -1,
+    zIndex: 0,
     resizeMode: 'cover',
     opacity: 0.8,
   },

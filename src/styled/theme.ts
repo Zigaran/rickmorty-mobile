@@ -1,6 +1,7 @@
 const color = {
   white: 'white',
   black: 'black',
+  lightBlack: 'rgba(0, 0, 0, 0.7)',
   purple: '#625261',
   darkPurple: '#3d2d3c',
   gray: 'rgba(0, 0, 0, 0.3)',
@@ -9,6 +10,7 @@ const color = {
   skyBlue: '#89beb3',
   green: '#59ff00',
   orange: 'rgba(255, 98, 0, 0.4)',
+  darkGrey: '#161616',
 };
 
 export const theme = {
