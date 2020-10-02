@@ -4,33 +4,30 @@ import { styles } from './styles';
 import icons from '../../icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { theme } from '../../styled';
+import { connect } from 'react-redux';
+import { getInput, clearData } from '../../redux/actions/querys';
 
 export type inputTextType = NativeSyntheticEvent<TextInputChangeEventData>;
 
-const SearchInput = () => {
-  const [value, changeValue] = useState('');
+interface Props {
+  inputValue?: string;
+  getInput: (p: string) => void;
+  clearData: () => void;
+}
 
-  const onChange = (inputValue: inputTextType): void => {
-    const textValue = inputValue.nativeEvent.text;
-    changeValue(textValue);
-  };
-
-  const clearInput = () => {
-    changeValue('');
-  };
-
+const SearchInput = ({ inputValue, getInput, clearData }: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>{icons.search}</View>
       <TextInput
         placeholder="Search something..."
         placeholderTextColor={theme.color.lightGray}
-        value={value}
-        onChange={onChange}
+        value={inputValue}
+        onChangeText={(txt) => getInput(txt)}
         style={styles.textInput}
       />
-      {value ? (
-        <TouchableOpacity onPress={clearInput} style={styles.icon}>
+      {inputValue ? (
+        <TouchableOpacity onPress={() => clearData()} style={styles.icon}>
           {icons.close}
         </TouchableOpacity>
       ) : (
@@ -40,4 +37,10 @@ const SearchInput = () => {
   );
 };
 
-export default SearchInput;
+function mapState(state: any) {
+  return {
+    inputValue: state.data.input,
+  };
+}
+
+export default connect(mapState, { getInput, clearData })(SearchInput);

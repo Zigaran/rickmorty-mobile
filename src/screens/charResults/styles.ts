@@ -3,11 +3,6 @@ import styled from 'styled-components/native';
 import { theme } from '../../styled';
 import { Container as _Container } from '../../components';
 
-// export const Container = styled(View)(() => ({
-//   backgroundColor: theme.color.creamWhite,
-//   flexDirection: 'column',
-// }));
-
 export const Content = styled(View)(() => ({
   flex: 1,
   alignItems: 'center',

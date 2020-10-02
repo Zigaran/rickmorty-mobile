@@ -1,10 +1,15 @@
+export { default as CharModal } from './charModal';
+export { default as CharItem } from './charItem';
 export { default as Container } from './container';
 export { default as CustomDrawerScreen } from './customDrawerScreen';
 export { default as DrawerItem } from './drawerItem';
+export { default as EpisItem } from './episItem';
+export { default as EpisModal } from './episModal';
 export { default as FooterButton } from './footerButton';
 export { default as Header } from './header';
+export { default as LocatItem } from './locatItem';
+export { default as LocatModal } from './locatModal';
 export { default as PageButton } from './pageButton';
-export { default as CharItem } from './charItem';
 export { default as SearchButton } from './searchButton';
 export { default as SearchInput } from './searchInput';
 export { default as Switcher } from './switcher';

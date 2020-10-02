@@ -9,11 +9,18 @@
  */
 
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { Provider } from 'react-redux';
 import AppNavigator from './src/navigation/AppNavigator';
+import generateStore from './src/redux/store';
+
+let store = generateStore();
 
 const App = () => {
-  return <AppNavigator />;
+  return (
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+  );
 };
 
 export default App;

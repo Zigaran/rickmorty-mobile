@@ -2,16 +2,15 @@ import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
-const img = { uri: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' };
-
 interface Props {
   name: string;
   image: string;
+  onPress: () => void;
 }
 
-const CharItem = ({ name, image }: Props) => {
+const CharItem = ({ name, image, onPress }: Props) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.name}>
         <Text style={styles.text}>{name}</Text>

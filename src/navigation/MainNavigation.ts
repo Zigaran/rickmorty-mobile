@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { DrawerNavigator } from './DrawerNavigator';
-import { Results } from '../screens';
+import { CharResults, LocationResults, EpisResults } from '../screens';
 
 const noHeader = { headerShown: false };
 
@@ -10,8 +10,18 @@ const stack = {
     navigationOptions: noHeader,
   },
 
-  Results: {
-    screen: Results,
+  CharResults: {
+    screen: CharResults,
+    navigationOptions: noHeader,
+  },
+
+  LocationResults: {
+    screen: LocationResults,
+    navigationOptions: noHeader,
+  },
+
+  EpisodesResults: {
+    screen: EpisResults,
     navigationOptions: noHeader,
   },
 };
